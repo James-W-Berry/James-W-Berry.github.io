@@ -2447,7 +2447,7 @@ input[type="radio"] + label:before {
 }
 
 .image.main img {
-  width: 100%;
+  width: 30%;
 }
 
 @media screen and (max-width: 736px) {
@@ -2774,6 +2774,7 @@ button:disabled,
 
 .tiles article > a:hover {
   color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tiles article > a h2 {
@@ -2797,27 +2798,27 @@ button:disabled,
 }
 
 .tiles article.style1 > .image:before {
-  background-color: #12121c;
+  background-color: #000000bb;
 }
 
 .tiles article.style2 > .image:before {
-  background-color: #37e0b6;
+  background-color: #000000bb;
 }
 
 .tiles article.style3 > .image:before {
-  background-color: #fac300;
+  background-color: #000000bb;
 }
 
 .tiles article.style4 > .image:before {
-  background-color: #9f2abf;
+  background-color: #000000bb;
 }
 
 .tiles article.style5 > .image:before {
-  background-color: #2c239a;
+  background-color: #000000bb;
 }
 
 .tiles article.style6 > .image:before {
-  background-color: #8499e7;
+  background-color: #000000bb;
 }
 
 body:not(.is-touch) .tiles article:hover > .image {
