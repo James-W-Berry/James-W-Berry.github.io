@@ -43,13 +43,93 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Maikuu</h1>
-                            <span class="image main"><img src="images/maikuu_logo.png" alt="" /></span>
-							<a>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-                            <a href="https://maikuu.app/">Check Maikuu out here</a>
+                            
+							<p>In early 2020, I purchased 
+                                <a href="https://www.amazon.com/Japanese-Death-Poems-Written-Monks/dp/0804831793" target="_blank">
+                                    "Japanese Death Poems - Written by Zen Monks and Haiku Poets on the Verge of Death"</a>. 
+                                    I've been slowly reading through these poems, growing more fond of them over time. 
+                                    Later in the year, I was happy to see a unique game mechanic in the newly released 
+                                    <a href="https://www.playstation.com/en-us/games/ghost-of-tsushima/" target="_blank">
+                                        "Ghost of Tsushima"</a> video game. The player would direct the camera to several 
+                                        specific points of interest in the current environment and select a haiku line. 
+                                        Once repeating this process twice more, the player would be rewarded with a wearable 
+                                        headband engraved with the newly composed haiku.</p>
+                            <iframe class="image main" width="560" height="315" src="https://www.youtube.com/embed/XXuERBUqr_I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
+                            <p>I thought this offered the player a great opportunity to engage further in the role-playing 
+                                aspect of the game. This mechanic brought to mind my recent readings and created a desire 
+                                to explore this concept a bit further. I decided I would take inspiration from Ghost of 
+                                Tshushima and create a simple haiku creation app that included a similar guided haiku 
+                                composition feature.</p>
+                            <p>The key features I was initially targeting were: </p>
+                                <li>A feed where users can view haikus posted to the service and interact with them by familiar actions (liking, favoriting), and offering some unique way of engaging deeper with each individual post</li>
+                                <li>Basic composition mode allowing for a simple and quick way to write a haiku</li>
+                                <li>Interactive composition mode allowing for deeper interaction and contemplation while writing the haiku </li>
+                                <li>A profile page where users can see their collections of liked, favorited, or owned posts</li>
+                            <br/>
+                                <p>As of Christmas 2020, these initial goals have been accomplished. 
+                                    The result ended up taking form as a web application. The account creation, 
+                                    authentication management, hosting, and database was created using Firebase 
+                                    and the frontend development was implemented using React with the Material UI 
+                                    library being commonly utilized.</p>
+                                <br/>
+
+                                <h2>The Feed</h2>
+                                <img src="images/maikuu_feed.png" class="image main" alt="feed" />
+                                <p>The feed consists of all user posts ordered by a provided filter for date and likes. 
+                                    The user can interact with each post by liking, favoriting, or selecting the post for 
+                                    a focused view. This gives the user a full screen view of the post with options to 
+                                    hide the haiku and just view the image and to view the focus points. These points 
+                                    are generated by the post author and let the viewer see where on the image each 
+                                    line of the haiku was inspired from when hovering over them.
+                                </p>
+                                     <div class="row"> 
+                                        <div class="column">
+                                            <img src="images/maikuu_post.png" style="width:100%" alt="view focus points" />
+                                        </div> 
+                                        <div class="column">
+                                            <img src="images/maikuu_view_focus_points.png" style="width:100%" alt="view focus points" />
+
+                                      </div> 
+                                    </div> 
+
+                                <br/>
+                                <br/>
+
+                                <h2>Compose</h2>
+                                <p>Maikuu gives users two modes to create their haiku. 
+                                    The first mode is a simple form where a user can fill out the fields with basic options 
+                                    to complete their haiku. 
+                                    The second mode encourages the user to take more time to select an abstract 
+                                    concept to contemplate, use an image for inspiration, and localize the haiku lines 
+                                    to specific focus points on the image. </p>
+                                    <p>There are a couple guiding elements to encourage this reflection. 
+                                    First, there is a sample abstract noun presented to kickstart the user's reflection. 
+                                    The concept was predetermined in the Ghost of Tsushima game but I wanted to add 
+                                    more options in Maikuu so I created a sample dictionary of abstract nouns that 
+                                    the user can cycle through for ideas. Second, I provided a few sample inspiration images 
+                                    if the user did not have an image on hand that they would like to use. 
+                                    After selecting the reflection concept and inspiration image, 
+                                    the user can then drag each of the three markers to specific points on the image 
+                                    and begin their composition. Once complete, they are presented with options
+                                    for adding a title and posting anonymously before confirming the submission. </p>
+                                <span>
+                                    
+                                           <img src="images/maikuu_basic.png" class="image main" alt="view focus points" />
+                                           <img src="images/maikuu_interactive.gif" class="image main" alt="view focus points" />
+                                        
+                                </span>
+                                <br/>
+                                <br/>
+
+                                <h2>Profile</h2>
+                                <p>The profile page is a simple feature that allows users to view quickly view collections 
+                                    of posts: likes, favorites, and their own authored haikus.</p>
+                                <br/>
+
+                                <a href="https://maikuu.app/">Check Maikuu out here</a>
 
                         </div>
+                        
 					</div>
 
 				<!-- Footer -->
