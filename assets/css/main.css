@@ -3403,11 +3403,6 @@ body.is-menu-visible #menu .close {
   #wrapper > * > .inner {
     padding: 0 1.25em;
   }
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
 }
 
 .row {
@@ -3420,8 +3415,8 @@ body.is-menu-visible #menu .close {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
   max-width: 50%;
   padding: 0 4px;
 }
@@ -3432,11 +3427,20 @@ body.is-menu-visible #menu .close {
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns
-@media screen and (max-width: 800px) {
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
-} */
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
